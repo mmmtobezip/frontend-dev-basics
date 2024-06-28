@@ -1,0 +1,25 @@
+## maven
+**/target
+**/build
+**/out
+
+## eclipse
+**/.settings
+**/.classpath
+**/.project
+
+## others
+.DS_Store
+
+## IntelliJ IDEA 
+.idea/*
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+#TablePlus
+**/History/
+**/Metrics/
