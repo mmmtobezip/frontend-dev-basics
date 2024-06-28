@@ -24,15 +24,19 @@ input[type="password"] {
 	margin-top: 10px;
 }
 
+input[type="text"].focused {
+	border-color: #2a00e6;
+	background-color: #e1e6f6;
+}
+
 </style>
 <script>
 function focused(el) {
-	el.style.borderColor = "#2a00e6";
-	el.style.backgroundColor = "#e1e6f6";
+	el.className = "focused";
 }
 
-function blured() {
-	console.log("blured");	
+function blured(el) {
+	el.className = "";
 }
 
 </script>
@@ -42,7 +46,7 @@ function blured() {
 	<form>
 		<input
 			onfocus="focused(this)"
-			onblur="blured()"
+			onblur="blured(this)"
 			type="text"
 			placeholder="이메일">
 		<input type="password" placeholder="비밀번호">
