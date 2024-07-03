@@ -25,6 +25,23 @@
 - function
 */
 
+/*
+자바 스크립트의 객체를 분류하는 또 다른 방법
+1. 내장객체
+    - 자바스크립트 엔진 내부에 미리 내장(정의)되어 있는 객체
+    - Number, String, Boolean, Array, RegExp, Date, ... : 생성자 함수
+    - parseInt, setTimeout, setInterval,... : 일반 함수
+
+2. 호스트 객체(not built-in engine)
+    - 자바스크립트 엔진이 embedded된 환경에서 제공하는 객체(=브라우저 환경에서 제공하는 객체)
+    e.g. Node에선 import를 통해 불러올 수 있음 
+    - Browset Host: screen, document(DOM), location, navigator, xmlHttpRequest,... etc.  => Browser DOM Programming
+    - Node Host: fs, http, os, path, process, ... etc.(모듈로 제공) 
+
+3. 사용자 정의 객체(user-defined object)
+    - 자바스크립트 엔진이 코드를 실행하면서 생성되는 객체  
+    - 사용자 객체와 내장객체는 JSEngin안에 존재 
+*/
 console.log("=== 기본 타입(undefined, number, string, boolean ===");
 var u;
 var i = 10.7;
