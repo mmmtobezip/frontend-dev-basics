@@ -44,6 +44,27 @@ console.log("=== Array vs Object ===");
 var a6 = [];
 a6[0] = 0;
 a6['1'] = 1;
-ar['2'] = 2;
+a6['2'] = 2;
+a6.name = '둘리';
+a6.age = 10; 
 
-console.log(a6['0'], a6[1], a6[2], "length:" + a6.length);
+console.log(a6['0'], a6[1], a6[2], a6['name'], a6['age'], "length:" + a6.length);
+
+var o6 = {};
+o6[0] = 0;
+o6['1'] = 1;
+o6['2'] = 2;
+o6.length = 3; // 임의로 추가, 안했을 경우 배열과 달리 length가 0이 된다. != 
+o6.name = '둘리';
+o6.age = 10;
+console.log(o6['0'], o6[1], o6[2], o6['name'], o6['age'], "length:" + o6.length); //객체 attribute는 '.'으로 연관 배열에 접근할 수 있지만, 어떤 변수가 담고있을 땐 스트링으로 바꾼 후 '[]'로 접근해야 한다. e.g. attr="age", o[attr] 이런 식으로 접근 
+
+console.log("=== for ~ in: 객체 ===");
+for(prop in o6) {
+    console.log(prop + ":" + o6[prop]); // o6.prop 접근 불가(배열 아니기에)
+}
+
+console.log("=== for ~ in: 배열 ===");
+for(prop in a6) {
+    console.log(prop + ":" + a6[prop]); 
+}
