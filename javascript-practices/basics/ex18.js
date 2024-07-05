@@ -6,7 +6,7 @@
 Q) 왜 쓸까? 
     - 상태 유지 e.g. react's useSate 
     - 전역 변수 회피 e.g. react's useSate(inner를 마음껏 접근하고 싶을 때)
-
+    - 정보 은닉 e.g. react's useSate
 */
 
 /* Lexical Scope */
