@@ -3,6 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		var h3Element = document.createElment('h3');
+		var h3TextNode = document.createTextNode('Hello DOM');
+		h3Element.append(h3TextNode);
+		
+		doucment.body.appendChild(h3Element); //appendChild(): DOM API -> dom화면 변하고 변한 내용이 화면으로 전달 
+		
+	}, 2000);
+}
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

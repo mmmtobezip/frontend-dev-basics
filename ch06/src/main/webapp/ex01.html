@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
+<script>
+// window 객체 
+window.n = '둘리'; 
+console.log(window.n, n);
+
+var email = 'dooly@gmail.com';
+console.log(window.email, email); //global은 전역 범위없고,전역 범위는 모두 윈도우의 속성들 
+
+setTimeout(function() {
+	var child = window.open('popup.html', 'popup', 'width=600, height=400'); //전역 변수
+	
+	setTimeout(function() {
+		// 자식창 내용 변경 
+		child.document.write("<h1>popup conents changed!!!</h1>") //write메서드로 html tag 삽입 가능 
+	}, 1000);
+	
+	setTimeout(function() {
+		// 자식창 움직이기 - 애니메이션
+		child.moveTo(200, 200);
+	}, 400);
+}, 2000); //2초 뒤에 popup 모달창 등장
+</script>
 </head>
 <body>
 <body>
