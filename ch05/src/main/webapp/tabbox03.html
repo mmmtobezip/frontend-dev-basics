@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>리스트를 이용한 메뉴 만들기</title>
+<link rel="stylesheet" type="text/css" href="/ch05/css/tabbox.css"></link>
+<script src = 'https://code.jquery.com/jquery-3.7.1.min.js'></script>
+<script>
+/* $(function onTabClicked() {
+	//var liSelected1 = document.querySelector('li.selected');
+	var $liSelected = $(".li").css('selected'); 
+	
+	liSelected && (liSelected.className = ''); //if문 대신 &&(and) 연산자로 대체 가능
+
+	this.className = 'selected';
+	//console.log(this);
+});
+
+function onTabClicked() {
+	var liSelected = document.querySelector('li.selected');
+	liSelected && (liSelected.className = '');
+	this.className = 'selected';
+	
+	//jquery는 빈배열일경우 html elements가 없어서 null값 체크를 따로 안해도
+} */
+
+$(function() {
+	// '.~~' : class를 주는 것 
+	$(".tab-box li").click(function() {
+		$('.tab-box li.selected').removeClass('selected');
+		$(this).addClass('selected');	
+	});
+});
+
+/* var TabBox = {
+		onTabClicked: function() {
+			$('.tab-box li.selected').removeClass('selected');
+			$(this).addClass('selected');	
+		},
+		init: function() {
+			$(function() {
+				$(".tab-box li").click(TabBox.onTabClicked);
+			});
+		}
+}; */
+</script>
+</head>
+<body>
+<div class="tab-box">
+	<ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+    <div>
+    	탭뷰입니다.
+    </div>
+</div>    
+</body>
+</html>
